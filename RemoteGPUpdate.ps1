@@ -3,7 +3,7 @@ $file = $computer.split(".")[0]
 
 $user = Get-WmiObject –ComputerName $computer –Class Win32_ComputerSystem | Select -ExpandProperty UserName
 
-Invoke-GPUpdate -Computer "$Computer"
+Invoke-GPUpdate -Computer "$Computer" -Force
 
 Start-Sleep -s 10
 
